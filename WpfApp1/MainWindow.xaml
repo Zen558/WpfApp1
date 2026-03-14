@@ -7,7 +7,6 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Icon="Images/CalculatorIcon.ico">
-	<!-- путь к иконке в проекте -->
 	<Grid Margin="10">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
@@ -18,7 +17,6 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<!-- Заголовок -->
 		<TextBlock Grid.Row="0"
                Text="Калькулятор"
                FontSize="24"
@@ -26,19 +24,16 @@
                HorizontalAlignment="Center"
                Margin="0,0,0,20"/>
 
-		<!-- Первое число -->
 		<StackPanel Grid.Row="1" Margin="0,0,0,10">
 			<TextBlock Text="Первое число:" FontSize="14" Margin="0,0,0,5"/>
 			<TextBox x:Name="FirstNumberTextBox" FontSize="16" Padding="5" Height="35"/>
 		</StackPanel>
 
-		<!-- Второе число -->
 		<StackPanel Grid.Row="2" Margin="0,0,0,10">
 			<TextBlock Text="Второе число:" FontSize="14" Margin="0,0,0,5"/>
 			<TextBox x:Name="SecondNumberTextBox" FontSize="16" Padding="5" Height="35"/>
 		</StackPanel>
 
-		<!-- Операции -->
 		<StackPanel Grid.Row="3" Margin="0,0,0,15">
 			<TextBlock Text="Выберите операцию:" FontSize="14" Margin="0,0,0,10"/>
 			<UniformGrid Rows="1" Columns="5">
@@ -51,13 +46,11 @@
 			</UniformGrid>
 		</StackPanel>
 
-		<!-- Результат -->
 		<StackPanel Grid.Row="4" Margin="0,0,0,10">
 			<TextBlock Text="Результат:" FontSize="14" Margin="0,0,0,5"/>
 			<TextBox x:Name="ResultTextBox" FontSize="18" Padding="5" Height="40" IsReadOnly="True" Background="LightYellow" FontWeight="Bold"/>
 		</StackPanel>
 
-		<!-- Очистка -->
 		<Button Grid.Row="5" Content="Очистить" FontSize="16" Height="40" VerticalAlignment="Top" Click="ClearButton_Click"/>
 	</Grid>
 </Window>
